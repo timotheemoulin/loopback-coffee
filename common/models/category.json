@@ -1,0 +1,30 @@
+{
+  "name": "Category",
+  "plural": "Categories",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "toto": {
+      "type": "string"
+    }
+  },
+  "protected": [
+    "product"
+  ],
+  "validations": [],
+  "relations": {
+    "products": {
+      "type": "hasMany",
+      "model": "Product"
+    }
+  },
+  "acls": [],
+  "methods": {}
+}

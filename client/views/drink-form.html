@@ -1,0 +1,26 @@
+<section>
+    <form name="form" ng-submit="submitForm()">
+        <fieldset>
+            <legend>Get a drink</legend>
+
+            <div class="form-group">
+                <label>Category</label>
+                <select
+                        ng-disabled="isDisabled"
+                        ng-model="selectedCategory"
+                        ng-options="category as category.name for category in categories"></select>
+            </div>
+            <label>Coffee</label>
+            <select
+                    ng-disabled="isDisabled"
+                    ng-model="selectedCoffee"
+                    ng-options="product as product.name for product in products | filter:{categoryId:selectedCategory.id}"></select>
+            </div>
+
+            <div class="actions">
+                <label></label>
+                <button>Drink it!</button>
+            </div>
+        </fieldset>
+    </form>
+    <section>

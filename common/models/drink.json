@@ -1,0 +1,33 @@
+{
+  "name": "Drink",
+  "plural": "Drinks",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "date": {
+      "type": "date",
+      "required": true
+    },
+    "quantity": {
+      "type": "number"
+    }
+  },
+  "validations": [],
+  "relations": {
+    "product": {
+      "type": "belongsTo",
+      "model": "Product",
+      "foreignKey": "productId"
+    },
+    "drinker": {
+      "type": "belongsTo",
+      "model": "Drinker",
+      "foreignKey": "drinkerId"
+    }
+  },
+  "acls": [],
+  "methods": {}
+}

@@ -1,0 +1,9 @@
+<section>
+    <article ng-repeat="drink in drinks.slice().reverse()">
+            {{drink}}
+        <header>
+            <h1>{{drink.date | date}} | {{drink.product.name}}</h1>
+            <h2>{{drink.drinker.email}}</h2>
+        </header>
+    </article>
+</section>

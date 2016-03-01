@@ -1,0 +1,16 @@
+{
+  "name": "Drinker",
+  "base": "User",
+  "idInjection": true,
+  "properties": {},
+  "validations": [],
+  "relations": {
+    "drinks": {
+      "type": "hasMany",
+      "model": "Drink",
+      "foreignKey": "drinkerId"
+    }
+  },
+  "acls": [],
+  "methods": {}
+}
