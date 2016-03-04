@@ -12,6 +12,12 @@ angular
 
     }])
 
+    // all products
+    .controller('AllProductsController', ['$scope', 'Product', function ($scope, Product) {
+        $scope.products = Product.find();
+
+    }])
+
     // add drink
     .controller('AddDrinkController', ['$scope', 'Category', 'Product', 'Drink',
         '$state', function ($scope, Category, Product, Drink, $state) {

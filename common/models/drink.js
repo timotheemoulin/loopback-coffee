@@ -3,7 +3,7 @@ module.exports = function (Drink) {
     Drink.on('dataSourceAttached', function (obj) {
         var find = Drink.find;
         Drink.find = function (filter, cb) {
-            console.log('drink ------------------');
+
             filter = {
                 include: {
                     relation: 'product'

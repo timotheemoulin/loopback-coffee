@@ -13,6 +13,11 @@ angular
                 templateUrl: 'views/all-drinks.html',
                 controller: 'AllDrinksController'
             })
+            .state('all-products', {
+                url: '/all-products',
+                templateUrl: 'views/all-products.html',
+                controller: 'AllProductsController'
+            })
             .state('edit-drink', {
                 url: '/edit-drink/:id',
                 templateUrl: 'views/drink-form.html',
